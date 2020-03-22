@@ -1,7 +1,7 @@
 const http = require('http');
 const path = require('path');
 
-const chalk = require('chalk');
+// const chalk = require('chalk');
 
 const conf = require('./config');
 const route = require('./route');
@@ -20,7 +20,7 @@ class Server {
 
     server.listen(this.conf.port, this.conf.hostName,  ()=> {
       const address = `http://${this.conf.hostName}:${this.conf.port} `;
-      console.info(`Server started at ${chalk.green(address)}`);
+      // console.info(`Server started at ${chalk.green(address)}`);
       openUrl(address);
     });
   }
