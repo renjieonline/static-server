@@ -14,7 +14,7 @@ class Server {
 
   start () {
     const server = http.createServer((req, res) => {
-      const filePath = path.join(conf.rootPath, req.url);
+      const filePath = path.join(this.conf.rootPath, req.url);
       route(req, res, filePath, this.conf);
     });
 
