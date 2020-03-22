@@ -15,7 +15,7 @@ const argv = yargs
     default: '127.0.0.1'
   })
   .option('d', {
-    alias: 'root',
+    alias: 'rootPath',
     describe: 'root path',
     default: process.cwd()
   })
