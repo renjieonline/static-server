@@ -26,12 +26,12 @@ module.exports = function isFresh (stats, req, res) {
   const etag = req.headers['if-none-match'];
 
   if (!lastModified && !etag) {
-    console.log(1)
+    console.log(1);
     return false;
   }
 
   if (lastModified && lastModified !== res.getHeader('Last-Modified')) {
-    console.log(2)
+    console.log(2);
     return false;
   }
 
@@ -40,4 +40,4 @@ module.exports = function isFresh (stats, req, res) {
   }
 
   return true;
-}
+};

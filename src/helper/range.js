@@ -3,7 +3,7 @@ module.exports = (totalSize, req, res) => {
   if (!range) {
     return {
       code: 200
-    }
+    };
   }
   const sizes = range.match(/bytes=(\d*)-(\d*)/);
   const end = sizes[2] || totalSize -1;
@@ -12,7 +12,7 @@ module.exports = (totalSize, req, res) => {
   if (start > end || start < 0 || end > totalSize) {
     return {
       code: 200
-    }
+    };
   }
 
   res.setHeader('Accept-Ranges', 'bytes');
@@ -22,6 +22,6 @@ module.exports = (totalSize, req, res) => {
     code: 206,
     start: parseInt(start),
     end: parseInt(end)
-  }
+  };
 
-}
+};

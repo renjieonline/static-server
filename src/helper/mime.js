@@ -19,7 +19,7 @@ const mimeTypes= {
   'wav': 'audio/x-wave',
   'wma': 'audio/x-ms-wma',
   'wmv': 'audio/x-ms-wmv'
-}
+};
 
 module.exports = (filePath) => {
   let ext = path.extname(filePath)
@@ -32,4 +32,4 @@ module.exports = (filePath) => {
   }
 
   return mimeTypes[ext] || mimeTypes['txt'];
-}
+};

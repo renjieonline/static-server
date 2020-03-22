@@ -13,7 +13,7 @@ const source = fs.readFileSync(tplPath);
 const template = Handlebars.compile(source.toString());
 
 module.exports = function route (req, res, filePath, conf) {
-  const contentType = mime(filePath)
+  const contentType = mime(filePath);
   fs.stat(filePath, (err, stats) => {
     if (err) {
       res.statusCode = 404;
@@ -61,9 +61,9 @@ module.exports = function route (req, res, filePath, conf) {
           title: path.basename(filePath),
           dir: dir ? `/${dir}` : '',
           files
-        }
+        };
         res.end(template(data));
-      })
+      });
     }
   });
-}
+};

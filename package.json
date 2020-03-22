@@ -1,5 +1,5 @@
 {
-  "name": "static-server",
+  "name": "jax-server",
   "version": "1.0.0",
   "description": "",
   "main": "src/app.js",
@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "supervisor ./src/index.js",
-    "lint": "lint --fix .",
+    "lint": "eslint --fix .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "pre-commit": [
