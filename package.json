@@ -1,0 +1,37 @@
+{
+  "name": "static-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "bin": {
+    "jax-server": "bin/jax-server"
+  },
+  "scripts": {
+    "start": "supervisor ./src/index.js",
+    "lint": "lint --fix .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renjieonline/static-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/renjieonline/static-server/issues"
+  },
+  "homepage": "https://github.com/renjieonline/static-server#readme",
+  "devDependencies": {
+    "chalk": "^3.0.0",
+    "eslint": "^6.8.0",
+    "pre-commit": "^1.2.2"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.3",
+    "yargs": "^15.3.1"
+  }
+}
